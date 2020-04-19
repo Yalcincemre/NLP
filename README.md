@@ -1,2 +1,2 @@
 # NLP
- Extracting information from resumes
+ Extracting Information from Resumes
