@@ -1,1 +1,15 @@
+!pip install pyresparser
 
+import numpy as np
+import nltk
+import spacy
+
+nltk.download("stopwords")
+from pyresparser import ResumeParser
+data= ResumeParser("/Users/Cemre/Desktop/CemreYALCIN__CV.pdf").get_extracted_data()
+print(type(data))
+#<class 'dict'>
+print(data)
+#{'name': 'CEMRE YALÇIN', 'email': 'cemryalcin@gmail.com', 'mobile_number': '1184048', 'skills': ['Analysis', 'Mathematics', 'Github', 'Python', 'Ggplot', 'Ai', 'Programming', 'Mis', 'Email', 'Content', 'English', 'Pandas', 'Technical', 'Statistics', 'Testing', 'R', 'Algorithms', 'Numpy', 'German', 'Sql', 'Writing', 'Tensorflow', 'Matplotlib'], 'college_name': None, 'degree': ['Master’s Degree:  \n\n\uf0b7', 'Bachelor’s Degree'], 'designation': None, 'experience': None, 'company_names': None, 'no_of_pages': 1, 'total_experience': 0}
+print(data.keys())
+#dict_keys(['name', 'email', 'mobile_number', 'skills', 'college_name', 'degree', 'designation', 'experience', 'company_names', 'no_of_pages', 'total_experience'])
